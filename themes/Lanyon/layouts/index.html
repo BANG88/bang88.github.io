@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!--
+  <!--
       This section just sets up some metadata for the website.
 
       It probably does not need to be changed.
     -->
-    <meta charset="utf-8">
-    <base href="{{ .Site.BaseURL }}">
-    <title>{{ .Site.Title }}</title>
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+  <meta charset="utf-8">
 
-    {{ partial "head_includes.html" . }}
+  <base href="{{ .Site.BaseURL }}">
+  <title>{{ .Site.Title }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> {{ partial "head_includes.html" . }}
 </head>
-  <body class="theme-base-08" lang="en">
+
+<body class="theme-base-08" lang="en">
 
   {{ partial "sidebar.html" . }}
 
   <!-- See /layouts/indexes/category.html for explanation of this section -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
             <a href="/" title="Home">Home</a>
           </h3>
-        </div>
       </div>
+    </div>
 
-      <!--
+    <!--
         This section contains the content of our home page.
 
         I have broken it into three main sections:
@@ -43,23 +45,19 @@
         /layouts/posts/summary.html to show a summary of the 10 most recent
         posts we have made.
       -->
-      <div class="container content">
-        <h1>👦🏽</h1>
+    <div class="container content">
+      <h1>👦🏽</h1>
 
-        <p class="lead"> Hello! </p>
-        
-        <!-- Recent Posts section -->
-        <h1 class="post-title">🌲</h1>
-          <section id="main">
-            <ul id="list">
-              {{ range first 10 .Data.Pages }}
-              {{ .Render "summary"}}
-              {{ end }}
-            </ul>
-          </section>
-      </div>
+      <p class="lead"> Hello! </p>
+
+      <!-- Recent Posts section -->
+      <h1 class="post-title">🌲</h1>
+      <section id="main">
+        <ul id="list">
+          {{ range first 10 .Data.Pages }} {{ .Render "summary"}} {{ end }}
+        </ul>
+      </section>
     </div>
+  </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-{{ partial "footer.html" . }}
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label> {{ partial "footer.html" . }}
