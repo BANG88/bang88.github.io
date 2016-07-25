@@ -21,6 +21,5 @@ git checkout master
 git pull origin master
 
 git pull origin blog
-git checkout blog
 
 git subtree push --prefix=public origin master
