@@ -1,0 +1,15 @@
+language: go
+install: go get -v github.com/spf13/hugo
+script:
+- hugo
+- git config --global user.email "sqibang@gmail.com"
+- git config --global user.name "bang"
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- sh deploy.sh
+notifications:
+  email:
+    on_failure: always
+env:
+  global:
+    secure: bt+T6SmqmY/CP51gW8FRAHyyVZKBVCauUyy7Fm1T2AuyHC6rhzqSK7Nf7+T17tEXu6E/jzCdjEW6REO0jSoub46xCVpO9XPqpgBWeeXhdJgR9UP3i9Deor+V5cZiD0qI4ZjPMmOEdgJxn/peEBlcQmmSY3titIwi6QNDoGjG1CNUHPIVUbhiQ5Yp82z5sna+NFoydKELQJoQXW1U1bC17RSh0XfTJhUMKU1c3pBrIALtWCyzo/BVqB0BUPZUoP05Jq60/vddZbwaCNGIxxPACVehhQ9HRTGEJqnjLoXSge3v0Afo4Ho6z6fs6ymEvPdoKXhGmT5ti/WvS1D7uHY2kBPWOBuQfHnKnr4yg4S5FGO4v29d9OCv0Z6s+BU/tNyr7aagEc1WvlmHWTCJIJ/h1JE7UprkCHRqbccn3dpiKQBmTOz6QkrPGTC/DLsP6y0QuG0RZ3Q7xDHX+kvueOXPw8FnA4zCZJfcTfP+O/DlNK12+7pugBR69yXMqey5cddtnXU4hERvDZo5e8FdbsXsioPSaEJIM3df0b6ToC4MgGlMYbVPvi9SuEe6nWa1CSzzHUDqLMWhXMvKuTIw/IW1FdcKtn+qWLxZ1HFlmmK8ZrhdhczNX8n3FojI54pyv/WzBs2UhcSE09+5kjuQYW1VGtSSLWizrH29fzLGglsaKMY=
