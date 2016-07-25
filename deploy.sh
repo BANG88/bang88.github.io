@@ -17,7 +17,7 @@ git commit -m "$msg"
 
 # Push source and build repos.
 
-git checkout origin master
+git checkout master
 git pull origin master
 
 git pull origin blog
