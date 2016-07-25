@@ -16,8 +16,6 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git pull origin master
-
-git pull origin blog
+git push origin blog
 
 git subtree push --prefix=public origin master
