@@ -18,4 +18,4 @@ git commit -m "$msg"
 # Push source and build repos.
 git pull origin blog
 git pull origin master
-git subtree push -f --prefix=public origin master
+git subtree push --prefix=public origin master
