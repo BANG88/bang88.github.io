@@ -16,8 +16,6 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-
-git checkout master
 git pull origin master
 
 git pull origin blog
