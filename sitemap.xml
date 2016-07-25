@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://bang88.github.io/</loc>
+    <lastmod>2016-07-25T16:14:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bang88.github.io/posts/react/</loc>
+    <lastmod>2016-07-25T16:14:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bang88.github.io/posts/newest/</loc>
+    <lastmod>2016-07-09T12:06:03+08:00</lastmod>
+  </url>
+  
+</urlset>
